@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Mocha Test</title>
-        <link rel="stylesheet" href="node_modules/mocha/mocha.css"/>
-    </head>
-    <body>
-       <div id="mocha">
-<p>
-<a href=".">Index</a>
-</p>
-</div>
-<div id="messages"></div>
-<div id="fixtures"></div>
-<script src="node_modules/mocha/mocha.js"></script>
-<script src="node_modules/chai/chai.js"></script>
-<script src="index.js"></script> <!-- YOUR FILENAME FOR YOUR MAIN PROJECT FILE in the src= -->
-<script>mocha.setup('bdd')</script>
-<script src="index.test.js"></script> <!-- YOUR FILENAME FOR YOUR TESTING FILE in the src= -->
-<script>mocha.run();</script>
+<html>
+<head>
+    <title>Mocha Test</title>
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css"/>
+</head>
+<body>
+    <!-- This div is where Mocha will display the test results -->
+    <div id="mocha">
+        <p>
+            <a href=".">Index</a>
+        </p>
+    </div>
+    <!-- This div can be used to display messages during testing -->
+    <div id="messages"></div>
+    <!-- This div can be used to load any fixtures needed for testing -->
+    <div id="fixtures"></div>
+    <!-- Load Mocha library for running tests -->
+    <script src="node_modules/mocha/mocha.js"></script>
+    <!-- Load Chai library for assertions -->
+    <script src="node_modules/chai/chai.js"></script>
+    <!-- Load the main project file (replace 'index.js' with your actual main file) -->
+    <script src="index.js"></script>
+    <!-- Set up Mocha to use the BDD interface -->
+    <script>mocha.setup('bdd')</script>
+    <!-- Load the test file (replace 'index.test.js' with your actual test file) -->
+    <script src="index.test.js"></script>
+    <!-- Run the tests -->
+    <script>mocha.run();</script>
 </body>
 </html>
